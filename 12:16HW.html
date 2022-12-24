@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+</head>
+<body>
+
+	<!--互動式視窗-->
+	<script>
+		var rand = Math.floor((Math.random()*10)+1);
+		var guess;
+		guess = window.prompt('Please enter an integer')
+
+		while(guess!=rand){
+			if(guess < rand){
+				guess = window.prompt('The answer is higher than '+ guess);
+			}else if(guess > rand){
+				guess = window.prompt('The answer is lower than '+ guess);
+			}
+		}
+		if(guess=rand){
+			document.writeln('Correct!<br>The answer is '+ guess);
+		}
+	</script>
+
+</body>
+</html>
